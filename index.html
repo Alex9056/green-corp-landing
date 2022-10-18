@@ -3,9 +3,14 @@
 <head>
  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700;800&display=swap">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <link rel="stylesheet" href="main.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700;800&display=swap"/>
+  <link rel="stylesheet" 
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
+   integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" 
+   crossorigin="anonymous" referrerpolicy="no-referrer">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <title>Солнечные батареи GreenCorp</title>
 </head>
 <body>
@@ -17,12 +22,12 @@
     </div>
   </header>
   <section class="about">
-    <div class="about__info">
+    <div class="about__info  animate__animated animate__fadeInLeft animate__slow">
       <h1>Солнечные панели GreenRobotic</h1>
       <p>Производите дешёвую экологически чистую электроэнергию из солнечного света</p>
-      <button type="button">Узнать подробнее</button>
+      <button type="button">Узнать подробнее<i class="fas fa-angle-right btnicon"></i></button>
     </div>
-    <div class="about__images">
+    <div class="about__images animate__animated animate__fadeInRight animate__slow">
       <img alt="" class="about__sun-image" src="img/sun.png">
       <img alt="" class="about__image" src="img/solar-panel.png">
     </div>
@@ -33,7 +38,7 @@
       <p>Поможем подобрать модель.<br>
         Выбрать удобный вариант доставки и установки.<br>
         Гарантия возврата денег.</p>
-        <form .form>
+        <form>
             <div class="form__group">
                 <label for="name">Ваше имя</label>
                 <input type="text" placeholder="Введите имя" id="name">
@@ -43,13 +48,13 @@
                 <input type="email" placeholder="***@yandex.ru" id="email">
             </div>
             <div class="form__group">
-                <label for="tel">Номер телефона</label>
-                <input type="tel" placeholder="7(999)999-99-99" id="tel">
+                <label for="phone">Номер телефона</label>
+                <input type="tel" placeholder="7(999)999-99-99" id="phone">
             </div>
             <div class="form__group">
                 <label for="budget">Примерный бюджет</label>
-                <select id="budget" class="form__group">
-                    <option >Выберите вариант</option>
+                <select id="budget">
+                    <option hidden>Выберите вариант</option>
                     <option value="10-30">10 000₽ – 30 000₽</option>
                     <option value="30-60">30 000₽ – 60 000₽</option>
                     <option value="60-100">60 000₽ – 100 000₽</option>

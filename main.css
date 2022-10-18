@@ -9,6 +9,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    position: sticky;
+    top:0;
+    z-index: 1;
+    background: #fff;
 }
 .header__logo {
     height: 30px;
@@ -35,11 +39,20 @@ button {
 }
 .about__image {
     width: 500px;
+    
 }
-   
+/*.about__images {
+    position: relative;
+    
+}   */
 .about__sun-image {
     width: 100px;
     height: 100px;
+    position:absolute;
+    /*top:0;
+    left:0;*/
+    animation: rotation 10s infinite linear;
+
 }
 .about {
     display: flex;
@@ -47,6 +60,10 @@ button {
     align-items: center;
     padding-bottom: 115px;
     padding-top: 115px;
+    /* ... */
+    background: url('img/back.png') no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .about h1 {
  font-size: 70px;
@@ -63,15 +80,13 @@ button {
     padding: 20px 25px;
     margin-top: 20px;
 }
+.btnicon {
+    margin-left:10px;
+}
 .about__info {
     max-width: 550px;
 }
-.about {
-    /* ... */
-    background: url('img/back.png') no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
+
   .form__container {
     width: 550px;
    /* margin: 0 auto;*/
@@ -107,9 +122,9 @@ button {
   .form label {
     font-size: 18px;
     font-weight: 600;
-    padding-bottom: 15px;
+    margin-bottom: 20px;
   }
-  .form input{
+  .form input, .form select{
     font-size: 18px;
     color:#213053;
     height:60px;
@@ -117,23 +132,16 @@ button {
     border:none;
     border-radius:15px;
   }
-  .form select{
-    font-size: 18px;
-    color:#213053;
-    height:60px;
-    padding: 20px 0 0 20px ;
-    border:none;
-    border-radius:15px;
-  }
+
   .form__submit {
     font-size: 18px;
     font-weight: 600;
     margin-top: 40px;
   }
-    select {/*убираем галочку у селекта*/
-        appearance: none;
-    
-    }
+select {/*убираем галочку у селекта*/
+    appearance: none;
+
+}
 button:hover {
     background-color: #f6980c;
     box-shadow: 0 16px 36px rgba(246 152 12 / 20%);
@@ -153,12 +161,12 @@ footer{
 
 }
 .footer__copyright{
-    padding-top:40px;
+    margin-top:40px;
     text-align: center;
     opacity:0.5;
 }
 .footer__group{
-    padding-right: 80px;
+    margin-right: 80px;
 }
 .footer__links{
     display: flex;
@@ -174,3 +182,80 @@ footer{
 }
 
 
+
+@keyframes rotation {
+   from { transform:rotate(0);}
+   to {transform:rotate(360deg);}
+}
+
+/* Планшеты */
+@media (max-width: 1024px) {
+    .about {
+        padding: 115px 20px;
+    }
+  
+    .about h1 {
+        font-size: 36px;
+        line-height: 40px;
+    }
+  
+    .about__image {
+        width: 280px;
+    }
+  
+    .about__sun-image {
+        width: 75px;
+        height: 75px;
+    }
+ }
+  
+ /* Мобильные устройства */
+ @media (max-width: 720px) {
+    header {
+        padding: 10px;
+    }
+  
+    .header__logo {
+        height: 20px;
+    }
+  
+    header a {
+        margin-right: 10px;
+    }
+  
+    .about {
+        flex-direction: column-reverse;
+        padding: 50px 10px;
+    }
+  
+    .about h1 {
+        font-size: 36px;
+        line-height: 40px;
+    }
+  
+    .about__image {
+        width: 280px;
+    }
+  
+    .about__sun-image {
+        width: 75px;
+        height: 75px;
+    }
+  
+    .form {
+        padding: 50px 10px;
+    }
+  
+    .form h2 {
+        font-size: 36px;
+    }
+  
+    footer {
+        padding: 50px 10px;
+    }
+  
+    .footer__container {
+        flex-direction: column;
+    }
+ }
+ 
