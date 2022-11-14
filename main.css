@@ -188,6 +188,145 @@ footer{
    to {transform:rotate(360deg);}
 }
 
+/*---------------------*/
+.features {
+    background: #fff;
+    padding: 115px 60px;
+ }
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+}
+.card {
+    padding: 35px 40px 25px 40px;
+    border-radius: 5px;
+    border:#D9E4E6 solid 1px;
+    background: #FFFFFF;
+}
+.card p{
+    font-size: 16px;
+    line-height: 22px;
+    opacity:0.8;
+}
+
+.card__logo {/*контейнер логотипа карточки*/
+    width: 100px;
+    height: 100px;
+    font-size: 32px;
+    font-weight: 700;
+    background: #eaeff9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon1 {/*логотип карточки*/
+   color: #ffb406;
+}
+.icon2 {
+    color: #ad1714;
+ }
+ .icon3 {
+    color: #22a030;
+ }
+ .features__border {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border:#E6EAF4 solid 1px;
+    width: 100%;
+ }
+.features__feedback {/*блок стекстом и 2 карточками*/
+    display: flex;
+}
+.features__feedback-left {
+    margin-right: 10px;
+ }
+ .features__feedback-left h2{
+    font-size: 48px;
+ }
+ .features__feedback-left p{
+    font-size: 18px;
+    line-height: 26px;
+    opacity: 0.7;
+ }
+ .features__feedback-right {
+    display: flex;
+    align-items: center;
+ }
+ .features__box {/*карточки в блоках отзыва*/
+    padding: 30px 40px 25px 40px;
+    color:#fff;
+    border-radius: 25px;
+ }
+ .features__box h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 48px;
+ }
+ .features__savings-box {/*стиль левой карточки отзывов*/
+    background: #dc5e26;
+    box-shadow: 0px 6px 0 rgb(221 95 38 / 20%);
+    margin-right: 30px;
+ }
+ .features__rate-box {/*стиль правой карточки отзывов*/
+    background: #1D263A;
+    box-shadow: 0px 6px 0  rgb(29 38 58 / 20%);
+ }
+ .stars {
+    color: #ff7039;
+ }
+ .promo {
+    display: flex;
+}
+.promo__image {
+    background: url('img/promo.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    flex-shrink: 0;
+}
+
+.promo__right {
+    background: #dd5f26;
+    padding: 160px 60px;
+} 
+.promo__card{
+    background: #fff;
+    padding: 30px 40px;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 500;
+    border-radius: 25px;
+}
+.promo__card p::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background: #ec6b29;
+}
+.promo__card p {
+    opacity: 0.8;
+}
+
+.promo__card button {
+    background: #107b1c;
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 15px 30px;
+    font-weight: 600;
+}
+.promo__btnorder {
+    display: flex;
+    justify-content: center;
+}
+.promo__card button i {
+    font-size: 15px;
+    margin-left: 5px;
+}
 /* Планшеты */
 @media (max-width: 1024px) {
     .about {
@@ -256,6 +395,42 @@ footer{
   
     .footer__container {
         flex-direction: column;
+    }
+    .features {
+        padding: 50px 10px;
+     }
+     .cards {
+        grid-template-columns: auto;
+     }
+     .features__feedback {
+        flex-direction: column;
+     }
+     .features__feedback-left {
+        margin-right: 0;
+     }
+     .features__feedback-left h2{
+        font-size: 36px;
+     }
+     .features__feedback-right {
+        flex-direction: column;
+        align-items: initial;
+     }
+     .features__box h3 {
+        font-size: 36px;
+     }
+     .features__savings-box {/*стиль левой карточки отзывов*/
+        margin-right: 0px;
+        margin-bottom: 30px;
+     }
+     .promo {
+        flex-direction: column-reverse;
+     }
+     .promo__right {
+        padding: 50px 10px;
+    } 
+    .promo__image {
+        width: 100%;
+        height: 500px;
     }
  }
  
