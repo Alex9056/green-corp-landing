@@ -64,7 +64,14 @@ button {
     background: url('img/back.png') no-repeat;
     background-position: center;
     background-size: cover;
+    position: relative;
 }
+.orb-canvas {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    right: 0;
+ }
 .about h1 {
  font-size: 70px;
  line-height: 76px;
@@ -326,6 +333,12 @@ footer{
 .promo__card button i {
     font-size: 15px;
     margin-left: 5px;
+}
+.orb-anvas {
+    position: absolute;
+    top:0;
+    right: 0;
+    height: 100%;
 }
 /* Планшеты */
 @media (max-width: 1024px) {
